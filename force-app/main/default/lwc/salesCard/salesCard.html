@@ -1,0 +1,24 @@
+<template>
+    <div class="card">
+        <div class="card-header">
+            <h2>{productName}</h2>
+        </div>
+        <div class="card-body">
+            <img src={productImage} alt={productName} class="product-image" />
+            <p>{productDescription}</p>
+            <p class="price">Giá: {productPrice} VND</p>
+        </div>
+        <div class="card-footer">
+            <lightning-button 
+                label="Mua ngay" 
+                variant="brand" 
+                onclick={handleBuyNow}>
+            </lightning-button>
+            <lightning-button 
+                label="Thêm vào giỏ hàng" 
+                variant="neutral" 
+                onclick={handleAddToCart}>
+            </lightning-button>
+        </div>
+    </div>
+</template>

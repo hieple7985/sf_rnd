@@ -1,0 +1,27 @@
+<template>
+    <div class="login-container">
+        <h1>Đăng Nhập</h1>
+        <lightning-input
+            label="Tên người dùng"
+            type="text"
+            value={username}
+            onchange={handleUsernameChange}
+        ></lightning-input>
+        <lightning-input
+            label="Mật khẩu"
+            type="password"
+            value={password}
+            onchange={handlePasswordChange}
+        ></lightning-input>
+        <lightning-button
+            label="Đăng Nhập"
+            variant="brand"
+            onclick={handleLogin}
+        ></lightning-button>
+
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        <template if:true={errorMessage}>
+            <p class="error-message">{errorMessage}</p>
+        </template>
+    </div>
+</template>
