@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="User Profile" icon-name="standard:user">
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src={userImage} alt="User Profile Picture" />
+            </div>
+            <div class="profile-details">
+                <h1 class="user-name">{userName}</h1>
+                <p class="user-title">{userTitle}</p>
+                <div class="contact-info">
+                    <lightning-icon icon-name="utility:email" alternative-text="Email"></lightning-icon>
+                    <span>{userEmail}</span>
+                </div>
+                <div class="contact-info">
+                    <lightning-icon icon-name="utility:phone" alternative-text="Phone"></lightning-icon>
+                    <span>{userPhone}</span>
+                </div>
+                <div class="contact-info">
+                    <lightning-icon icon-name="utility:location" alternative-text="Location"></lightning-icon>
+                    <span>{userLocation}</span>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
