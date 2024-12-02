@@ -1,0 +1,7 @@
+<template>
+    <form onsubmit={handleSubmit}>
+        <lightning-input name="name" label="Tên" onchange={handleInputChange} required></lightning-input>
+        <lightning-textarea name="description" label="Mô tả" onchange={handleInputChange} required></lightning-textarea>
+        <lightning-button type="submit" label="Gửi yêu cầu"></lightning-button>
+    </form>
+</template>
