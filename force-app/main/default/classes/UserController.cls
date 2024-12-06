@@ -1,3 +1,7 @@
 public with sharing class UserController {
-  // Your controller methods here
+  @AuraEnabled
+  public static String signUp(String email, String password) {
+    // Your sign-up logic here
+    return 'Success';
+  }
 }
