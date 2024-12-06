@@ -22,15 +22,55 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - Install Salesforce CLI.
 - Install Salesforce Extensions Pack.
 - Install Node.js (LTS version).
-  > nvm install --lts=v16.20.2
-  > nvm use v16.20.2
-  > npm install
+
+```sh
+  nvm install --lts=v18.20.5
+  nvm use v18.20.5
+  npm install
+```
+
 - Check Salesforce CLI integration with VS Code.
 
 ### NodeJS Dependency
 
 ```json
 "eslint": "^8.57.1"
+```
+
+### Development Guidline
+
+````sh
+(Auth CLI)
+
+List: sf org list --all
+
+Help: sf org login web --help
+Force: sf force auth web login
+Default: sf org login web --instance-url https://curious-fox-ap12pb-dev-ed.trailblaze.my.salesforce.com --set-default
+
+- User: letronghiep1985@curious-fox-ap12pb.com
+- Password: 6evjOfFFISar
+
+> Successfully authorized letronghiep1985-mxke@force.com with org ID 00Dd50000044tIAEAY
+
+(Assign Org-Id Alias)
+
+```sh
+Command: sf alias set <alias> <OrgId>
+Assign: sf alias set MyDevHub letronghiep1985@curious-fox-ap12pb.com
+Unassign: sf alias unset MyDevHub
+````
+
+## Create and Test Our Scratch Org
+
+```sh
+sf org open --target-org letronghiep1985@curious-fox-ap12pb.com
+
+sf config set target-dev-hub=letronghiep1985@curious-fox-ap12pb.com
+
+sf org create scratch -d -f config/project-scratch-def.json -a dreamhouse-org
+
+sf org open
 ```
 
 ## Visual Studio Code
