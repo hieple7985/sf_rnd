@@ -76,12 +76,27 @@ sf org create scratch -d -f config/project-scratch-def.json -a dreamhouse-org
 
 [Open the newly created scratch org in the default web browser]
 sf org open
+
+[Scratch Org Site]
+- https://energy-java-8934-dev-ed.scratch.my.salesforce-setup.com/lightning/setup/ObjectManager/home
 ```
 
 ## Deployment
 
 ```sh
 sf project deploy start
+```
+
+## Deployment
+
+### Object Manager
+
+- https://energy-java-8934-dev-ed.scratch.my.salesforce-setup.com/lightning/setup/ObjectManager/home
+
+```sh
+(Account Object -> Fields & Relationships -> New)
+- Email -> Type = Email
+- Password -> Type = Text (Length = 16)
 ```
 
 ## Visual Studio Code

@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "Account1Ref"
+      },
+      "Name": "Test User Account",
+      "Email__c": "test@example.com",
+      "Password__c": "securePass123"
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "Account2Ref"
+      },
+      "Name": "Demo User Account",
+      "Email__c": "demo@example.com",
+      "Password__c": "demoPass456"
+    }
+  ]
+}
