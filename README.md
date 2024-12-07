@@ -83,11 +83,45 @@ sf org open
 
 ## Deployment
 
+### Tab Deploy
+
 ```sh
-sf project deploy start
+sf project deploy start -m "CustomTab:MyCustomTab"
 ```
 
-## Deployment
+### Project Deploy
+
+```sh
+sf project deploy start -d force-app
+sf project deploy start --target-org dreamhouse-org
+sf project deploy start --target-org test-3ealmada6h7y@example.com
+```
+
+### Component Deploy
+
+```sh
+sf project deploy start -m "LightningComponentBundle:loginComponent"
+```
+
+## Development
+
+### Assign Scratch Org
+
+```sh
+sf config set target-org=dreamhouse-org
+```
+
+### Org List
+
+```sh
+sf org list --all
+```
+
+### Open Scratch Org
+
+```sh
+sf org open --target-org dreamhouse-org
+```
 
 ### Object Manager
 
@@ -97,6 +131,13 @@ sf project deploy start
 (Account Object -> Fields & Relationships -> New)
 - Email -> Type = Email
 - Password -> Type = Text (Length = 16)
+```
+
+### App Builder
+
+```sh
+(lightning App Builder -> FlexiPageList)
+- https://energy-java-8934-dev-ed.scratch.my.salesforce-setup.com/lightning/setup/FlexiPageList/page
 ```
 
 ## Visual Studio Code
