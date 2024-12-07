@@ -3,5 +3,4 @@
     <label>Dreamhouse</label>
     <description>Permission set for Dreamhouse app</description>
     <hasActivationRequired>false</hasActivationRequired>
-    <license>Salesforce</license>
 </PermissionSet>

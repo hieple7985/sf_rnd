@@ -64,13 +64,24 @@ Unassign: sf alias unset MyDevHub
 ## Create and Test Our Scratch Org
 
 ```sh
+[Open the specified Salesforce org in the default web browser]
 sf org open --target-org letronghiep1985@curious-fox-ap12pb.com
 
+[Set the specified Salesforce org as the default Dev Hub]
 sf config set target-dev-hub=letronghiep1985@curious-fox-ap12pb.com
 
+[Create a new scratch org using the specified configuration file
+and alias it as 'dreamhouse-org']
 sf org create scratch -d -f config/project-scratch-def.json -a dreamhouse-org
 
+[Open the newly created scratch org in the default web browser]
 sf org open
+```
+
+## Deployment
+
+```sh
+sf project deploy start
 ```
 
 ## Visual Studio Code
@@ -79,6 +90,18 @@ sf org open
 
 ```sh
   - Install **Salesforce Extensions Pack** from the Marketplace.
-  - Install **Node.js**.
+  - Install **Node.js** v18 LTS.
   - Check Salesforce CLI integration with VS Code.
+```
+
+## How to change the language
+
+```sh
+https://YOUR_INSTANCE.lightning.force.com/lightning/settings/personal/LanguageAndTimeZone/home
+
+1. Go to Setup
+2. Search for "Company Information"
+3. Edit the Default Language setting
+4. Set it to "English"
+5. Save changes
 ```
