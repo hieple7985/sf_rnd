@@ -89,6 +89,14 @@ sf org open
 sf project deploy start -m "CustomTab:MyCustomTab"
 ```
 
+### Application Deploy
+
+```sh
+sf project deploy start -m "CustomApplication:MyApp" --target-org dreamhouse-org
+sf project deploy start --metadata PermissionSet:MyAppAccess
+sf org assign permset --name MyAppAccess
+```
+
 ### Project Deploy
 
 ```sh
